@@ -22,15 +22,6 @@ Before we dive into Python programming, let's set up a proper development enviro
 
 **Try it now**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/leekwansoo/python-excercise/blob/main/_0environment_setup.ipynb)
 
-### 🔬 Binder (Free)
-1. Click any "Launch Binder" badge in our course materials
-2. Wait for the environment to load (2-3 minutes)
-3. Start coding in a full Jupyter Lab environment
-
-**Try it now**: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leekwansoo/python-excercise/main?labpath=_0environment_setup.ipynb)
-
----
-
 ## 💻 Option 2: Local Installation (Recommended for Serious Learning)
 
 **Perfect for**: Long-term learning, offline access, professional development
@@ -48,11 +39,11 @@ Before we dive into Python programming, let's set up a proper development enviro
 
 #### For Windows:
 1. **Download Python**
-   - Visit [python.org](https://www.python.org/downloads/)
-   - Download Python 3.12 or later
+   - Visit [python.org](https://www.python.org/downloads/) from your Browser
+   - Download Python 3.12 or later release
    - **Important**: Check "Add Python to PATH" during installation
 
-2. **Verify Installation**
+2. **Verify Installation from cmd window**
    ```cmd
    python --version
    pip --version
@@ -73,32 +64,126 @@ Before we dive into Python programming, let's set up a proper development enviro
    - Download the macOS installer
    - Run the installer and follow instructions
 
-#### For Linux (Ubuntu/Debian):
+### Step 2: Install Visual Studio Code
+
+1. **Direct Download**
+   - Visit [code.visualstudio.com](https://code.visualstudio.com/download)
+   - Download Visual Studio Code installer for Windows
+   - Run the installer and follow instructions
+   - VS Code is the most popular Integrated Development Tool
+
+### Step 3: Set Up Git Bash Terminal in VS Code 🔧
+
+**Why Git Bash?** Git Bash provides a Unix-like command-line environment on Windows, allowing you to use Git commands and bash scripts seamlessly.
+
+#### **3.1: Install Git for Windows (Includes Git Bash)**
+
+1. **Download Git for Windows**
+   - Visit [git-scm.com/download/win](https://git-scm.com/download/win)
+   - Download the latest version (usually auto-downloads)
+
+2. **Installation Process** (Important Settings!)
+   - Run the downloaded installer
+   - **Select Components**: ✅ Check "Git Bash Here"
+   - **Default Editor**: Choose "Use Visual Studio Code as Git's default editor"
+   - **PATH Environment**: Select "Git from the command line and also from 3rd-party software"
+   - **Line Ending**: Select "Checkout Windows-style, commit Unix-style line endings"
+   - **Terminal Emulator**: Select "Use Windows' default console window"
+   - **Accept all other default settings**
+
+#### **3.2: Configure Git Bash in VS Code Terminal**
+
+1. **Open VS Code**
+
+2. **Open Terminal Settings**
+   - Press `Ctrl + Shift + P` to open Command Palette
+   - Type "Terminal: Select Default Profile"
+   - Press Enter
+
+3. **Add Git Bash Profile** (if not automatically detected)
+   - Press `Ctrl + Shift + P`
+   - Type "Preferences: Open Settings (JSON)"
+   - Add this configuration:
+
+   ```json
+   {
+       "terminal.integrated.profiles.windows": {
+           "PowerShell": {
+               "source": "PowerShell",
+               "icon": "terminal-powershell"
+           },
+           "Command Prompt": {
+               "path": [
+                   "${env:windir}\\Sysnative\\cmd.exe",
+                   "${env:windir}\\System32\\cmd.exe"
+               ],
+               "args": [],
+               "icon": "terminal-cmd"
+           },
+           "Git Bash": {
+               "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+               "args": [],
+               "icon": "terminal-bash"
+           }
+       },
+       "terminal.integrated.defaultProfile.windows": "Git Bash"
+   }
+   ```
+
+4. **Alternative Method - Automatic Detection**
+   - Open VS Code
+   - Press `Ctrl + Shift + ` (backtick) to open terminal
+   - Click the dropdown arrow next to the `+` in terminal tab
+   - Select "Git Bash" from the list
+
+#### **3.3: Verify Git Bash Installation**
+
+1. **Open New Terminal in VS Code**
+   - Press `Ctrl + Shift + ` (backtick)
+   - You should see "bash" in the terminal tab
+
+2. **Test Commands**
+   ```bash
+   # Check Git version
+   git --version
+   
+   # Check current directory
+   pwd
+   
+   # List files
+   ls -la
+   
+   # Check Python version
+   python --version
+   ```
+
+#### **3.4: Set Git Configuration** (First Time Setup)
+
+In the Git Bash terminal, configure your Git identity:
+
 ```bash
-# Update package list
-sudo apt update
+# Set your name (replace with your actual name)
+git config --global user.name "Your Name"
 
-# Install Python 3 and pip
-sudo apt install python3 python3-pip
+# Set your email (replace with your actual email)
+git config --global user.email "your.email@example.com"
 
-# Verify installation
-python3 --version
-pip3 --version
+# Verify configuration
+git config --list
 ```
 
-### Step 2: Install Jupyter Lab
+#### **3.5: Terminal Selection in VS Code**
 
-Jupyter Lab is the modern interface for interactive Python programming:
+Now you can easily switch between terminals:
 
-```bash
-# Install Jupyter Lab
-pip install jupyterlab
+1. **Open Terminal**: `Ctrl + Shift + ` (backtick)
+2. **Create New Terminal**: Click the `+` dropdown
+3. **Select Terminal Type**:
+   - **Git Bash** (for Git commands and Unix-like experience)
+   - **PowerShell** (for Windows commands)
+   - **Command Prompt** (for traditional Windows commands)
 
-# Install additional useful packages
-pip install numpy pandas matplotlib seaborn requests
-```
-
-### Step 3: Download Course Materials
+### Step 4: Download Course Materials
 
 ```bash
 # Clone the course repository
@@ -110,6 +195,149 @@ cd python-excercise
 # Install course requirements
 pip install -r requirements.txt
 ```
+
+## 🎯 Visual Guide: VS Code Terminal Setup
+
+### **What Students Should See:**
+
+#### **Terminal Selection Dropdown:**
+When students click the dropdown next to `+` in the terminal, they should see:
+- ✅ **Git Bash** ← This is what we want!
+- PowerShell
+- Command Prompt
+
+#### **Git Bash Terminal Features:**
+```bash
+# Students will see this prompt in Git Bash:
+MINGW64 /c/Users/YourName/Desktop/python-excercise-main (main)
+$ 
+
+# They can use Unix-like commands:
+$ ls -la          # List files (instead of 'dir')
+$ pwd             # Show current directory
+$ cd session_01   # Change directory
+$ git status      # Check Git repository status
+$ python app.py   # Run Python files
+```
+
+## 🛠️ Troubleshooting Common Issues
+
+### **Issue 1: Git Bash Not Appearing in VS Code**
+
+**Solution:**
+1. **Restart VS Code** after installing Git
+2. **Manually add the path**:
+   - Press `Ctrl + ,` (Settings)
+   - Search for "terminal profiles"
+   - Click "Edit in settings.json"
+   - Add the Git Bash profile manually (see JSON above)
+
+### **Issue 2: "bash: command not found"**
+
+**Solution:**
+```bash
+# Check if Git is properly installed
+where git
+
+# If not found, reinstall Git for Windows
+# Make sure to select "Add Git to PATH" during installation
+```
+
+### **Issue 3: Permission Denied Errors**
+
+**Solution:**
+```bash
+# Run VS Code as Administrator (right-click VS Code icon)
+# Or check file permissions:
+ls -la filename.txt
+```
+
+#### **Issue 4: Git Commands Not Working**
+
+**Verify Git Installation:**
+```bash
+# These commands should work in Git Bash:
+git --version    # Should show Git version
+which git        # Should show Git path
+echo $PATH       # Should includes Git paths
+```
+
+## 📚 Essential Git Bash Commands for Students
+
+### **File and Directory Operations:**
+```bash
+# List files and directories
+ls                 # Basic listing
+ls -la            # Detailed listing with hidden files
+ls -lh            # Human-readable file sizes
+
+# Navigate directories
+pwd               # Print working directory
+cd directory_name # Change to directory
+cd ..             # Go up one directory
+cd ~              # Go to home directory
+cd /c/Users/      # Navigate to Windows Users folder
+```
+
+### **Git Operations:**
+```bash
+# Check repository status
+git status
+
+# Clone a repository
+git clone https://github.com/username/repository.git
+
+# Add files to staging
+git add filename.txt    # Add specific file
+git add .              # Add all files
+
+# Commit changes
+git commit -m "Your commit message"
+
+# Push to remote repository
+git push origin main
+```
+
+### **Python Operations:**
+```bash
+# Run Python files
+python filename.py
+python app.py
+
+# Install packages
+pip install package_name
+pip install -r requirements.txt
+
+# Check Python version
+python --version
+pip --version
+```
+
+## 🎓 Class Instructions Template
+
+### **For Instructors - What to Tell Students:**
+
+> **"Today we'll set up Git Bash in VS Code so you can use powerful Unix commands and Git version control."**
+
+**Step-by-Step for Students:**
+
+1. **"Open VS Code"**
+2. **"Press Ctrl + Shift + ` (the key above Tab) to open terminal"**
+3. **"Click the small dropdown arrow next to the + sign"**
+4. **"If you see 'Git Bash' - select it!"**
+5. **"If you don't see it, raise your hand for help"**
+
+**What Success Looks Like:**
+- Terminal shows: `MINGW64` in the prompt
+- Commands like `ls`, `pwd`, `git status` work
+- Can navigate using Unix-style paths
+
+**Common Student Questions:**
+- **Q:** "Why not just use PowerShell?"
+- **A:** "Git Bash gives us Unix commands that work the same on Mac/Linux, and better Git integration"
+
+- **Q:** "What's the difference between the terminals?"
+- **A:** "Think of them as different languages - PowerShell speaks Windows, Git Bash speaks Unix/Linux"
 
 ### Step 4: Launch Jupyter Lab
 
@@ -160,113 +388,3 @@ conda activate python-course
 
 # Install additional packages
 conda install pandas matplotlib seaborn
-```
-
----
-
-## 🧪 Testing Your Setup
-
-Let's verify everything is working correctly:
-
-### Test 1: Basic Python
-```python
-print("Hello, Python World! 🐍")
-print(f"Python is working correctly!")
-```
-
-### Test 2: Import Essential Libraries
-```python
-import sys
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
-print(f"Python version: {sys.version}")
-print("✅ All essential libraries imported successfully!")
-```
-
-### Test 3: Create Your First Plot
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-plt.figure(figsize=(10, 6))
-plt.plot(x, y, 'b-', linewidth=2, label='sin(x)')
-plt.title('Your First Python Plot! 📊')
-plt.xlabel('x')
-plt.ylabel('sin(x)')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.show()
-
-print("🎉 Congratulations! Your Python environment is ready!")
-```
-
----
-
-## 🎯 Interactive Setup Verification
-
-Ready to test your setup interactively?
-
-[![Test Your Setup](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leekwansoo/python-excercise/main?labpath=_0environment_setup.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/leekwansoo/python-excercise/blob/main/_0environment_setup.ipynb)
-
----
-
-## 🆘 Troubleshooting Common Issues
-
-### Issue: "python" command not found
-**Solution**: 
-- Windows: Reinstall Python and check "Add to PATH"
-- macOS/Linux: Use `python3` instead of `python`
-
-### Issue: Permission errors when installing packages
-**Solution**:
-```bash
-# Use --user flag to install for current user only
-pip install --user package_name
-
-# Or use virtual environments (recommended)
-python -m venv myenv
-source myenv/bin/activate  # On Windows: myenv\Scripts\activate
-pip install package_name
-```
-
-### Issue: Jupyter Lab won't start
-**Solution**:
-```bash
-# Try upgrading Jupyter
-pip install --upgrade jupyterlab
-
-# Clear browser cache and try again
-# Check if port 8888 is in use
-jupyter lab --port=8889
-```
-
----
-
-## ✅ Setup Checklist
-
-Before moving to the next lesson, ensure you have:
-
-- [ ] Python 3.8+ installed and working
-- [ ] Pip package manager available
-- [ ] Jupyter Lab or Notebook interface accessible
-- [ ] Course materials downloaded/accessible
-- [ ] Successfully run the test code snippets above
-
-## 🎉 You're Ready!
-
-Congratulations! You now have a fully functional Python development environment. You're ready to begin your Python programming journey!
-
-**Next Step**: [Your First Python Program](../02-basics/getting-started.md)
-
----
-
-**💡 Pro Tips**:
-- Bookmark your Jupyter Lab URL for quick access
-- Create a dedicated folder for your Python projects
-- Join Python communities online for continued learning and support
-- Practice coding a little bit every day for best results

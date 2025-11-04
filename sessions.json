@@ -1,0 +1,347 @@
+{
+  "course_info": {
+    "title": "Python Programming Training Program for Medical Laboratory Professionals",
+    "duration_weeks": 12,
+    "session_duration": "2 hours",
+    "target_audience": "Medical Laboratory Staff",
+    "skill_level": "Beginner-friendly"
+  },
+  "sessions": [
+    {
+      "week": 1,
+      "session_id": "S01",
+      "title": "Introduction & Setup",
+      "lab_application": "Lab data basics",
+      "learning_objectives": [
+        "Understand Python's role in medical laboratories",
+        "Set up Python development environment",
+        "Learn basic Python syntax and structure",
+        "Introduction to medical lab data types"
+      ],
+      "topics_covered": [
+        "Why Python for medical labs",
+        "Installing Python and development tools",
+        "First Python program",
+        "Understanding lab data formats",
+        "Basic input/output operations"
+      ],
+      "practical_examples": [
+        "Display lab information and contact details",
+        "Create simple lab equipment inventory",
+        "Basic calculator for lab calculations"
+      ],
+      "medical_lab_focus": "Understanding how programming can improve lab efficiency"
+    },
+    {
+      "week": 2,
+      "session_id": "S02",
+      "title": "Variables & Data Types",
+      "lab_application": "Patient demographics",
+      "learning_objectives": [
+        "Master Python variable creation and naming",
+        "Understand different data types for lab data",
+        "Store and manipulate patient information",
+        "Type conversion for lab values"
+      ],
+      "topics_covered": [
+        "Variable assignment and naming conventions",
+        "String data for patient names and IDs",
+        "Numeric data for lab values",
+        "Boolean data for test results",
+        "Type checking and conversion"
+      ],
+      "practical_examples": [
+        "Store patient demographics (name, age, gender)",
+        "Handle patient ID numbers and medical record numbers",
+        "Convert between different measurement units"
+      ],
+      "medical_lab_focus": "Organizing patient data and lab identifiers efficiently"
+    },
+    {
+      "week": 3,
+      "session_id": "S03",
+      "title": "Working with Numbers",
+      "lab_application": "Lab values & calculations",
+      "learning_objectives": [
+        "Perform mathematical operations on lab values",
+        "Calculate reference ranges and percentiles",
+        "Handle decimal precision for accurate results",
+        "Convert between different units of measurement"
+      ],
+      "topics_covered": [
+        "Arithmetic operations for lab calculations",
+        "Working with floating-point precision",
+        "Mathematical functions and formulas",
+        "Unit conversions (mg/dL to mmol/L, etc.)",
+        "Rounding and formatting numeric results"
+      ],
+      "practical_examples": [
+        "Calculate creatinine clearance",
+        "Convert glucose units (mg/dL ↔ mmol/L)",
+        "Determine BMI from height and weight",
+        "Calculate dilution factors"
+      ],
+      "medical_lab_focus": "Accurate mathematical operations for clinical calculations"
+    },
+    {
+      "week": 4,
+      "session_id": "S04",
+      "title": "Text Processing",
+      "lab_application": "Sample IDs & reports",
+      "learning_objectives": [
+        "Manipulate text data for sample identification",
+        "Format lab reports and results",
+        "Extract information from text strings",
+        "Create standardized naming conventions"
+      ],
+      "topics_covered": [
+        "String methods and operations",
+        "Text formatting and alignment",
+        "String splitting and joining",
+        "Regular expressions for pattern matching",
+        "Creating formatted reports"
+      ],
+      "practical_examples": [
+        "Generate unique sample ID numbers",
+        "Parse patient names and format consistently",
+        "Extract information from accession numbers",
+        "Create formatted lab result reports"
+      ],
+      "medical_lab_focus": "Standardizing text data and creating professional reports"
+    },
+    {
+      "week": 5,
+      "session_id": "S05",
+      "title": "Lists & Data Collections",
+      "lab_application": "Test panels & batches",
+      "learning_objectives": [
+        "Store multiple lab values in collections",
+        "Organize test panels and profiles",
+        "Manage batch processing data",
+        "Perform operations on groups of results"
+      ],
+      "topics_covered": [
+        "Creating and manipulating lists",
+        "Dictionaries for key-value lab data",
+        "Sets for unique identifiers",
+        "Tuples for immutable lab constants",
+        "Nested data structures"
+      ],
+      "practical_examples": [
+        "Create comprehensive metabolic panel (CMP)",
+        "Organize complete blood count (CBC) results",
+        "Manage daily batch processing lists",
+        "Store reference ranges for different tests"
+      ],
+      "medical_lab_focus": "Organizing complex lab data efficiently"
+    },
+    {
+      "week": 6,
+      "session_id": "S06",
+      "title": "Decision Making",
+      "lab_application": "Result interpretation",
+      "learning_objectives": [
+        "Implement logic for result interpretation",
+        "Create automated flagging systems",
+        "Make decisions based on lab values",
+        "Handle complex conditional scenarios"
+      ],
+      "topics_covered": [
+        "If-elif-else statements",
+        "Comparison operators for lab values",
+        "Logical operators for complex conditions",
+        "Nested conditional statements",
+        "Boolean logic for result interpretation"
+      ],
+      "practical_examples": [
+        "Flag abnormal lab results automatically",
+        "Interpret glucose tolerance test results",
+        "Determine critical values requiring immediate attention",
+        "Create decision trees for differential diagnosis support"
+      ],
+      "medical_lab_focus": "Automated interpretation and flagging of lab results"
+    },
+    {
+      "week": 7,
+      "session_id": "S07",
+      "title": "Loops & Automation",
+      "lab_application": "Batch processing",
+      "learning_objectives": [
+        "Automate repetitive lab tasks",
+        "Process multiple samples efficiently",
+        "Handle batch quality control",
+        "Create automated workflows"
+      ],
+      "topics_covered": [
+        "For loops for processing sample batches",
+        "While loops for continuous monitoring",
+        "Loop control with break and continue",
+        "Nested loops for complex processing",
+        "Error handling in automated processes"
+      ],
+      "practical_examples": [
+        "Process daily sample batches automatically",
+        "Calculate statistics for quality control data",
+        "Generate reports for multiple patients",
+        "Automated instrument data processing"
+      ],
+      "medical_lab_focus": "Streamlining repetitive laboratory tasks"
+    },
+    {
+      "week": 8,
+      "session_id": "S08",
+      "title": "Functions",
+      "lab_application": "Reusable lab calculations",
+      "learning_objectives": [
+        "Create reusable calculation functions",
+        "Standardize lab procedures in code",
+        "Build a library of lab functions",
+        "Implement parameter validation"
+      ],
+      "topics_covered": [
+        "Defining and calling functions",
+        "Parameters and return values",
+        "Local vs global variables",
+        "Lambda functions for simple calculations",
+        "Function documentation and best practices"
+      ],
+      "practical_examples": [
+        "Create functions for common lab calculations",
+        "Build eGFR calculation function",
+        "Standardize reference range checking",
+        "Create unit conversion function library"
+      ],
+      "medical_lab_focus": "Building reusable tools for laboratory calculations"
+    },
+    {
+      "week": 9,
+      "session_id": "S09",
+      "title": "File Handling",
+      "lab_application": "Lab data import/export",
+      "learning_objectives": [
+        "Read data from laboratory instruments",
+        "Export results to different formats",
+        "Handle CSV and Excel files",
+        "Manage large datasets efficiently"
+      ],
+      "topics_covered": [
+        "Reading and writing text files",
+        "CSV file processing for lab data",
+        "Excel file handling",
+        "JSON data format for structured information",
+        "Error handling for file operations"
+      ],
+      "practical_examples": [
+        "Import instrument data files",
+        "Export lab results to LIS format",
+        "Process quality control data files",
+        "Create backup systems for lab data"
+      ],
+      "medical_lab_focus": "Integrating with laboratory information systems"
+    },
+    {
+      "week": 10,
+      "session_id": "S10",
+      "title": "Data Analysis",
+      "lab_application": "Statistical QC",
+      "learning_objectives": [
+        "Perform statistical analysis on lab data",
+        "Implement quality control procedures",
+        "Calculate descriptive statistics",
+        "Identify trends and outliers"
+      ],
+      "topics_covered": [
+        "Descriptive statistics (mean, median, std dev)",
+        "Quality control calculations (CV, bias)",
+        "Trend analysis and control charts",
+        "Outlier detection methods",
+        "Statistical validation of methods"
+      ],
+      "practical_examples": [
+        "Create Levey-Jennings control charts",
+        "Calculate method precision and accuracy",
+        "Perform statistical QC analysis",
+        "Validate new laboratory methods"
+      ],
+      "medical_lab_focus": "Quality control and method validation"
+    },
+    {
+      "week": 11,
+      "session_id": "S11",
+      "title": "Visualization",
+      "lab_application": "Charts & graphs",
+      "learning_objectives": [
+        "Create professional charts and graphs",
+        "Visualize lab data trends",
+        "Generate quality control charts",
+        "Design informative dashboards"
+      ],
+      "topics_covered": [
+        "Introduction to matplotlib and plotting",
+        "Creating line charts for trends",
+        "Bar charts for categorical data",
+        "Scatter plots for correlations",
+        "Customizing charts for professional presentation"
+      ],
+      "practical_examples": [
+        "Generate control charts for QC monitoring",
+        "Create patient result trend graphs",
+        "Visualize test volume statistics",
+        "Build laboratory performance dashboards"
+      ],
+      "medical_lab_focus": "Professional data visualization for lab reporting"
+    },
+    {
+      "week": 12,
+      "session_id": "S12",
+      "title": "Final Project",
+      "lab_application": "Complete lab workflow",
+      "learning_objectives": [
+        "Integrate all learned concepts",
+        "Build a complete laboratory application",
+        "Demonstrate proficiency in Python for labs",
+        "Present project to colleagues"
+      ],
+      "topics_covered": [
+        "Project planning and design",
+        "Integrating multiple Python concepts",
+        "Code organization and documentation",
+        "Testing and validation procedures",
+        "Presentation and demonstration skills"
+      ],
+      "practical_examples": [
+        "Complete laboratory information management system",
+        "Automated quality control application",
+        "Patient result reporting system",
+        "Laboratory statistics and trending application"
+      ],
+      "medical_lab_focus": "Real-world application development for laboratory use"
+    }
+  ],
+  "assessment_methods": {
+    "weekly_exercises": "Hands-on coding exercises with lab scenarios",
+    "mini_projects": "2-3 small projects throughout the course",
+    "final_project": "Comprehensive laboratory application",
+    "participation": "Active engagement in discussions and peer coding"
+  },
+  "resources_provided": {
+    "hardware": "Pre-configured laptops for training sessions",
+    "software": "Python, Jupyter notebooks, relevant libraries",
+    "datasets": "Real (anonymized) medical laboratory data",
+    "documentation": "Digital course materials and reference guides",
+    "ongoing_support": "Email support and optional study groups"
+  },
+  "certification": {
+    "title": "Certificate in Python for Medical Laboratory Applications",
+    "requirements": [
+      "Attendance at minimum 10 of 12 sessions",
+      "Completion of weekly exercises",
+      "Successful final project presentation"
+    ],
+    "benefits": [
+      "Professional development credential",
+      "Qualification for advanced data analyst roles",
+      "Preparation for laboratory automation integration"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+streamlit
+markdown
+weasyprint
+pdfkit
+pathlib2
+Pillow
+reportlab

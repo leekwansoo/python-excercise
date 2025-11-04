@@ -1,0 +1,27 @@
+Python Commands for Session 1 exercise
+
+# check the verion of python
+python --version
+
+# list the installed module in this package
+pip list
+
+# install a depency module
+pip install "module_Name"
+
+# install dependency modules from requirements.txt
+pip install -r requirements.txt
+
+Window Commands 
+
+# list window commands
+help
+
+# list files in the directory 
+dir
+
+# Change to sub directory
+cd "sub_directory_name"
+
+# make a sub_directory in the present directory
+mkdir
