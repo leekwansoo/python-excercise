@@ -1,12 +1,18 @@
 Python Commands for Session 1 exercise
 
-# check the verion of python
+# Open Python mode from command terminal
+python
+
+# exit from python mode
+exit()
+
+# check the version of python
 python --version
 
 # list the installed module in this package
 pip list
 
-# install a depency module
+# install a dependency module
 pip install "module_Name"
 
 # install dependency modules from requirements.txt
