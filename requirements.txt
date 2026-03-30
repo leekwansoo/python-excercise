@@ -5,3 +5,4 @@ pdfkit
 pathlib2
 Pillow
 reportlab
+openpyxl
