@@ -17,11 +17,18 @@ python -m venv .venv # 아래의 Terminal에서 실행
 
 pip install streamlit
 
-4. Create a app.py file with following content 
+4. change directory to "streamlit" with
+
+cd streamlit
+
+5. Create a app.py file with following content 
 
 import streamlit as st 
 st.title("My first Streamlit app")
+ ------
+ streamlit and python codes
+ ------
 
-5.  run the file with following command at the terminal
+6.  run the file with following command at the terminal
 
 streamlit run app.py
