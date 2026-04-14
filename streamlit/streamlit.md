@@ -32,3 +32,7 @@ st.title("My first Streamlit app")
 6.  run the file with following command at the terminal
 
 streamlit run app.py
+
+load iris_data.csv in the file_upload menu
+
+then hit the Process CSV file

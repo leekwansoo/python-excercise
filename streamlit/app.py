@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from main import file_process_csv, file_process_pdf
 from excel2csv import convert_excel_to_csv
 st.title("My first Streamlit app")
+# menu for file upload
 uploaded_file = st.file_uploader("Upload a file", type=["csv", "xlsx","pdf"])
 if uploaded_file is not None:
     st.write("File uploaded successfully!")

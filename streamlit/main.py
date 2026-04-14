@@ -18,7 +18,7 @@ def file_process_csv(file_path):
     # df.plot(kind="scatter", x="sepal_length", y="sepal_width")
     # st.write(f"{df.head()}")
     df.plot(kind="scatter", x=df.columns[0], y=df.columns[1])
-    st.pyplot(plt.gcf())
+    st.pyplot(plt.gcf()) # Display the current figure
     plt.close()  # Close the figure to free memory
     return {"result": "CSV file processed successfully!"}
 
