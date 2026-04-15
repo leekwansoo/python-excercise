@@ -6,3 +6,4 @@ pathlib2
 Pillow
 reportlab
 openpyxl
+seaborn
